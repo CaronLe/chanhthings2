@@ -39,7 +39,7 @@ public class NavigationPanel extends JPanel implements ChangeListener, Observer{
     private Project project;
     
 
-    public NavigationPanel() {
+    public NavigationPanel(Gui gui) {
 		this.setBorder(BorderFactory.createLineBorder(Color.gray));
 		
 		// Name Project Panel
@@ -53,7 +53,7 @@ public class NavigationPanel extends JPanel implements ChangeListener, Observer{
 
 
 		// Project Tree Panel
-		navigationTreePanel = new NavigationTreePanel(this.project);
+		navigationTreePanel = new NavigationTreePanel(gui);
 //		navigationTreePanel.setPreferredSize(new Dimension(150, 600));
 		
 		// Scroll Panel
@@ -69,11 +69,12 @@ public class NavigationPanel extends JPanel implements ChangeListener, Observer{
 	
 	 public void setProject(Project project) {
 	        this.project = project;
-//	        this.navigationTreePanel.setProject(project);
+	        this.navigationTreePanel.setProject(project);
 	        if (project != null) {
 	            project.getSheetsContainer().addObserver(this);
 	            String nameProject =  project.Getname();
 	            this.nameProjectLabel.setText(nameProject);
+	           
 	        }
 	       
 	    }

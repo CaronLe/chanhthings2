@@ -77,7 +77,7 @@ public class SheetComboModel implements ComboBoxModel, Observer {
     }
     
     public Object getElementAt(int row) {
-    	System.out.println("Test in SheetCombo");
+    	
         if (project != null) {
             AbstractList<Sheet> sheets = project.getAnswerSheets();
             

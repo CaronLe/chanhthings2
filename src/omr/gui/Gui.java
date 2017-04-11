@@ -57,12 +57,12 @@ public class Gui extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(new Dimension(1200, 800));
 
-      
+        
         
         //Add widgets
         addWidgets();
         
-        // Initialize a new project
+     // Initialize a new project
         this.setProject(new Project());
 
         //Display the window
@@ -86,7 +86,7 @@ public class Gui extends JFrame {
         // Add Columns
         JPanel containerPanel = new JPanel();
         containerPanel.setLayout(new BorderLayout());
-        navigationPanel = new NavigationPanel();
+        navigationPanel = new NavigationPanel(this);
         containerPanel.add(navigationPanel, BorderLayout.WEST);
         // Tabs
         JTabbedPane tabs = new JTabbedPane();
@@ -139,6 +139,7 @@ public class Gui extends JFrame {
         structurePanel.setProject(project);
         calibratePanel.setProject(project);
         resultsPanel.setProject(project);
+        overviewPanel.setProject(project);
         
     }
     
@@ -203,6 +204,27 @@ public class Gui extends JFrame {
             Project loadedProject = deserializer.loadProject(file);
             this.setProject(loadedProject);
             this.projectFile = file;
+        } catch (Exception e) {
+            // Show an error dialog
+            JOptionPane.showMessageDialog(this,
+                "Failed to load the project.\n" + e,
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    
+    /**
+     * open Project method for the selection of Navigation Panel.
+     */
+    public void openSelectedProject(File selectedFile) {
+        
+        // Load project
+        try {
+            Deserializer deserializer = new Deserializer();
+            Project loadedProject = deserializer.loadProject(selectedFile);
+            this.setProject(loadedProject);
+            this.projectFile = selectedFile;
         } catch (Exception e) {
             // Show an error dialog
             JOptionPane.showMessageDialog(this,

@@ -9,62 +9,70 @@ import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreePath;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import jdk.internal.cmm.SystemResourcePressureImpl;
 import omr.Project;
 import omr.Sheet;
 
 public class ProjectTreeModel implements TreeModel, Observer{
 	 protected File root;
 	 private Project project;
-	  public ProjectTreeModel(Project root) 
+	  public ProjectTreeModel(File root) 
 	  { 
-		  this.project = root;
-//		  this.root = root; 
+//		  this.project = root;
+		  this.root = root; 
+		  
 	  }
 
 	  // The model knows how to return the root object of the tree
-	  public Object getRoot() { return project; }
+	  public Object getRoot() 
+	  { 
+		 return root;
+		  
+	  }
 
 	  // Tell JTree whether an object in the tree is a leaf
 	  public boolean isLeaf(Object node) 
 	  {  
-		  return false;
+		  return ((File)node).isFile();
 		  
 		
 	  }
 
 	  // Tell JTree how many children a node has
 	  public int getChildCount(Object parent) {
-		  Project p = (Project)parent;
-//	    String[] children = ((File)parent).list();
-//	    if (children == null) return 0;
-//	    return children.length;
-		  return p.getAnswerSheets().size();
+	
+	    String[] children = ((File)parent).list();
+	    if (children == null) return 0;
+	    return children.length;
+		  
 	  }
 
 	  // Fetch any numbered child of a node for the JTree.
 	  // Our model returns File objects for all nodes in the tree.  The
 	  // JTree displays these by calling the File.toString() method.
 	  public Object getChild(Object parent, int index) {
-//	    String[] children = ((File)parent).list();
-//	    if ((children == null) || (index >= children.length)) return null;
-////	    return new File((File) parent, children[index]);
+	    String[] children = ((File)parent).list();
+	    if ((children == null) || (index >= children.length)) return null;
+	    return new File((File) parent, children[index]);
 //	    return new File(children[index]);
-		  Project p = (Project)parent;
-		  return p.getAnswerSheets().get(index);
+//		  Project p = (Project)parent;
+//		  return p.getAnswerSheets().get(index);
 	  }
 
 	  // Figure out a child's position in its parent node.
 	  public int getIndexOfChild(Object parent, Object child) {
-//	    String[] children = ((File)parent).list();
-//	    if (children == null) return -1;
-//	    String childname = ((File)child).getName();
-//	    for(int i = 0; i < children.length; i++) {
-//	      if (childname.equals(children[i])) return i;
-//	    }
-//	    return -1;
-		Project p = (Project)parent;
-		Sheet c = (Sheet)child;
-		return p.getAnswerSheets().indexOf(c);
+	    String[] children = ((File)parent).list();
+	    if (children == null) return -1;
+	    String childname = ((File)child).getName();
+	    for(int i = 0; i < children.length; i++) {
+	      if (childname.equals(children[i])) return i;
+	    }
+	    return -1;
+//		Project p = (Project)parent;
+//		Sheet c = (Sheet)child;
+//		return p.getAnswerSheets().indexOf(c);
 	  }
 
 	  // This method is invoked by the JTree only for editable trees.  
@@ -91,6 +99,7 @@ public class ProjectTreeModel implements TreeModel, Observer{
 	        // Subscribe to new model
 	        if (project != null) {
 	            project.getSheetsContainer().addObserver(this);
+	            System.out.println("is this one happening");
 	        }
 	        
 	     
