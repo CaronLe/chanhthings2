@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<omr-project blackThreshold="-1" version="0.1" whiteThreshold="256">
+    <structure referenceSheet="0005.jpg">
+        <bubble-group bottomY="605" bubbleHeight="10" bubbleWidth="10"
+            columns="4" indexOffset="0" leftX="693" rightX="912"
+            rows="5" topY="437" type="vertical">
+            <answer-key>0000,0000,0000,0000,0000</answer-key>
+        </bubble-group>
+    </structure>
+    <answers>
+        <sheet id="0001.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0001.jpg"/>
+        <sheet id="0002.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0002.jpg"/>
+        <sheet id="0003.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0003.jpg"/>
+        <sheet id="0004.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0004.jpg"/>
+        <sheet id="0005.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0005.jpg"/>
+        <sheet id="0006.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0006.jpg"/>
+        <sheet id="0007.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0007.jpg"/>
+        <sheet id="0008.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0008.jpg"/>
+        <sheet id="0009.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0009.jpg"/>
+        <sheet id="0010.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0010.jpg"/>
+        <sheet id="0001.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0001.jpg"/>
+        <sheet id="0002.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0002.jpg"/>
+        <sheet id="0003.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0003.jpg"/>
+        <sheet id="0004.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0004.jpg"/>
+        <sheet id="0005.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0005.jpg"/>
+        <sheet id="0006.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0006.jpg"/>
+        <sheet id="0007.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0007.jpg"/>
+        <sheet id="0008.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0008.jpg"/>
+        <sheet id="0009.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0009.jpg"/>
+        <sheet id="0010.jpg" page="0" rotation="0" src="C:\Users\MyPC\Desktop\root\auto-grading-root\testdata\0010.jpg"/>
+    </answers>
+</omr-project>
