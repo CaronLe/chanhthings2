@@ -47,14 +47,20 @@ public class OverviewPanel extends JPanel implements Observer {
 		if (project != null)
 		{
 		  project.getSheetsContainer().addObserver(this);
+		  this.project = project;
           AbstractList<Sheet> sheets = project.getSheetsContainer().getSheets();
           for (Sheet sheet : sheets)
           {
 	       	  imagePathArray.add(sheet.getFilePath());
 	       	  System.out.println(sheet.getFilePath());
           } 
-          overviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray);
-          this.add(overviewImagesGridPanel);
+          System.out.println("test");
+          OverviewImagesGridPanel newOverviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray);
+          
+          // Add scroll (Not working due to delay of loading)
+        //  JScrollPane overviewPanelScrollPane = new JScrollPane(overviewImagesGridPanel2);
+         this.add(newOverviewImagesGridPanel);
+           
 		}
 	}
 		
