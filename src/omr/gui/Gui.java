@@ -96,11 +96,9 @@ public class Gui extends JFrame {
         // OverView Tab
         overviewPanel = new OverviewPanel();
         JScrollPane overviewPanelScrollPane = new JScrollPane(overviewPanel);
-        overviewPanelScrollPane.getVerticalScrollBar().setValue(150);
-        
-        
+        overviewPanelScrollPane.getVerticalScrollBar().setValue(overviewPanelScrollPane.getVerticalScrollBar().getMaximum());
         tabs.addTab("Bài Thi", null, overviewPanelScrollPane, "Hiển thị hình ảnh của toàn bộ bài thi");
-        
+ 
         // Structure
         structurePanel = new StructurePanel(this);
         tabs.addTab("Thiết Lập Cấu Trúc", null, structurePanel, "Thiết Lập Cấu Trúc Bài Thi");

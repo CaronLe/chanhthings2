@@ -19,6 +19,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
@@ -33,12 +34,14 @@ public class OverviewPanel extends JPanel implements Observer {
 	private static final long serialVersionUID = 1L;
 	//Properties
 	private java.util.List<String> imagePathArray;
+	private java.util.List<String> imageNameArray;
 	private OverviewImagesGridPanel overviewImagesGridPanel;
 	private Project project;
 	public OverviewPanel() {
 		this.setLayout(new BorderLayout());
 		imagePathArray = new ArrayList<String>();
-		overviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray);
+		imageNameArray = new ArrayList<String>();
+		overviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray, imageNameArray);
 		this.add(overviewImagesGridPanel);
 	}
 	
@@ -49,17 +52,17 @@ public class OverviewPanel extends JPanel implements Observer {
 		  project.getSheetsContainer().addObserver(this);
 		  this.project = project;
           AbstractList<Sheet> sheets = project.getSheetsContainer().getSheets();
+          imagePathArray.clear();
+          imageNameArray.clear();
           for (Sheet sheet : sheets)
           {
 	       	  imagePathArray.add(sheet.getFilePath());
+	       	  imageNameArray.add(sheet.getFileName());
 	       	  System.out.println(sheet.getFilePath());
           } 
           System.out.println("test");
-          OverviewImagesGridPanel newOverviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray);
-          
-          // Add scroll (Not working due to delay of loading)
-        //  JScrollPane overviewPanelScrollPane = new JScrollPane(overviewImagesGridPanel2);
-         this.add(newOverviewImagesGridPanel);
+          OverviewImagesGridPanel newOverviewImagesGridPanel = new OverviewImagesGridPanel(imagePathArray, imageNameArray);
+          this.add(newOverviewImagesGridPanel);
            
 		}
 	}
