@@ -96,23 +96,23 @@ public class Gui extends JFrame {
         // OverView Tab
         overviewPanel = new OverviewPanel();
         JScrollPane overviewPanelScrollPane = new JScrollPane(overviewPanel);
-        overviewPanelScrollPane.getVerticalScrollBar().setValue(150);
+        overviewPanelScrollPane.getVerticalScrollBar().setValue(overviewPanelScrollPane.getVerticalScrollBar().getMaximum());
         
         
-        tabs.addTab("Bài Thi", null, overviewPanelScrollPane, "Hiển thị hình ảnh của toàn bộ bài thi");
+        tabs.addTab("Bài Thi", null, overviewPanelScrollPane, "Hiển thị toàn bộ bài thi");
         
         // Structure
         structurePanel = new StructurePanel(this);
-        tabs.addTab("Thiết Lập Cấu Trúc", null, structurePanel, "Thiết Lập Cấu Trúc Bài Thi");
+        tabs.addTab("Thiết Lập Cấu Trúc", null, structurePanel, "Thiáº¿t Láº­p Cáº¥u TrĂºc BĂ i Thi");
         // setMnemonicAt(0, KeyEvent.VK_1);
 
         calibratePanel = new CalibratePanel(this);
-        tabs.addTab("Xử Lý Hình Ảnh", null, calibratePanel, "Xử lý hình ảnh và kiểm duyệt của người dùng");
+        tabs.addTab("Xử Lý Hình Ảnh", null, calibratePanel, "Xá»­ lĂ½ hĂ¬nh áº£nh vĂ  kiá»ƒm duyá»‡t cá»§a ngÆ°á»�i dĂ¹ng");
         // setMnemonicAt(0, KeyEvent.VK_1);
         tabs.addChangeListener(calibratePanel);  // Listen to tab change events
         
         resultsPanel = new ResultsPanel(this);
-        tabs.addTab("Kết Quả Thi", null, resultsPanel, "Kết quả thi của các thí sinh");
+        tabs.addTab("Kết Quả Thi", null, resultsPanel, "Káº¿t quáº£ thi cá»§a cĂ¡c thĂ­ sinh");
         // setMnemonicAt(0, KeyEvent.VK_1);
         tabs.addChangeListener(resultsPanel);
         
@@ -166,10 +166,10 @@ public class Gui extends JFrame {
     	if (project.isChanged()) {
     		// Prompt for confirmation
     		// TODO: offer "Save as" option
-            Object[] options = {"Huỷ thay đổi", "Thoát"};
+            Object[] options = {"Huá»· thay Ä‘á»•i", "ThoĂ¡t"};
             int answer = JOptionPane.showOptionDialog(this,
-                    "Bộ bài thi đã được thay đổi, bạn có muốn huỷ bỏ những thay đổi ?",
-                    "Huỷ thay đổi?",
+                    "Bá»™ bĂ i thi Ä‘Ă£ Ä‘Æ°á»£c thay Ä‘á»•i, báº¡n cĂ³ muá»‘n huá»· bá»� nhá»¯ng thay Ä‘á»•i ?",
+                    "Huá»· thay Ä‘á»•i?",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.WARNING_MESSAGE,
                     null,

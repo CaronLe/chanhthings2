@@ -55,7 +55,7 @@ public class QuestionGroupPropertiesPanel extends JPanel implements Scrollable, 
     private Orientation[] orientations = {Orientation.VERTICAL, Orientation.STUDENT_NUMBER, Orientation.CHECK_LETTER};
     
     public QuestionGroupPropertiesPanel() {
-        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Tuỳ Chỉnh Bộ Câu Hỏi"));
+        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Tùy Chỉnh Cấu Trúc"));
         
         // GridBagLayout
         this.setLayout(new GridBagLayout());
@@ -83,21 +83,21 @@ public class QuestionGroupPropertiesPanel extends JPanel implements Scrollable, 
 
         // Bubble width
         left.gridy = right.gridy = 2;
-        this.add(new JLabel("Độ Rộng Đơn Vị:"), left);
+        this.add(new JLabel("Chiều rộng đơn vị:"), left);
         bubbleWidthSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 256, 1));
         bubbleWidthSpinner.addChangeListener(this);
         this.add(bubbleWidthSpinner, right);
         
         // Bubble height
         left.gridy = right.gridy = 3;
-        this.add(new JLabel("Độ Dài Đơn Vị:"), left);
+        this.add(new JLabel("Chiều dài đơn vị:"), left);
         bubbleHeightSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 256, 1));
         bubbleHeightSpinner.addChangeListener(this);
         this.add(bubbleHeightSpinner, right);
         
         // Index
         left.gridy = right.gridy = 4;
-        this.add(new JLabel("Câu Hỏi Bắt Đầu:"), left);
+        this.add(new JLabel("Câu bắt đầu:"), left);
         indexSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 1024, 1));
         indexSpinner.addChangeListener(this);
         this.add(indexSpinner, right);
@@ -111,7 +111,7 @@ public class QuestionGroupPropertiesPanel extends JPanel implements Scrollable, 
         
         // Answer key
         wide.gridy = 6;
-        answerKey = new JButton("Câu Trả Lời Mẫu");
+        answerKey = new JButton("Chọn câu trả lời mẫu");
         answerKey.addActionListener(this);
         this.add(answerKey, wide);
     }

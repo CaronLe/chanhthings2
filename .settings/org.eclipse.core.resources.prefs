@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/omr/QuestionGroup.java=UTF-8
+encoding//src/omr/gui/Gui.java=UTF-8
+encoding//src/omr/gui/Menu.java=UTF-8
+encoding//src/omr/gui/calibration/SheetTableModel.java=UTF-8
+encoding//src/omr/gui/navigation/NavigationTreePanel.java=UTF-8
+encoding//src/omr/gui/results/ResultsTableModel.java=UTF-8
+encoding//src/omr/gui/structure/QuestionGroupPropertiesPanel.java=UTF-8
+encoding//src/omr/gui/structure/RegistrationMarkerPropertiesPanel.java=UTF-8
+encoding//src/omr/gui/structure/StructurePropertiesPanel.java=UTF-8

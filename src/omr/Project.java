@@ -6,7 +6,7 @@ import java.util.AbstractList;
 import java.util.Observable;
 import java.util.Observer;
 
-import com.apple.laf.AquaButtonExtendedTypes.SegmentedNamedBorder;
+
 import com.sun.xml.internal.bind.v2.runtime.RuntimeUtil.ToStringAdapter;
 
 import omr.SheetStructure.SheetStructureEvent;

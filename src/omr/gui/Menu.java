@@ -36,24 +36,24 @@ public class Menu extends JMenuBar implements ActionListener {
         add(fileMenu);
 
         // New project
-        newProject = new JMenuItem("Tạo Bộ Bài Thi Mới", KeyEvent.VK_N);
+        newProject = new JMenuItem("Tạo Bộ Bài Thi", KeyEvent.VK_N);
         newProject.addActionListener(this);
         fileMenu.add(newProject);
         
         // Open project
-        openProject = new JMenuItem("Mở Bộ Bài Thi", KeyEvent.VK_O);
+        openProject = new JMenuItem("Má»Ÿ Bá»™ BĂ i Thi", KeyEvent.VK_O);
         openProject.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
         openProject.addActionListener(this);
         fileMenu.add(openProject);
 
         // Save project
-        saveProject = new JMenuItem("Lưu Bộ Bài Thi", KeyEvent.VK_A);
+        saveProject = new JMenuItem("LÆ°u Bá»™ BĂ i Thi", KeyEvent.VK_A);
         saveProject.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
         saveProject.addActionListener(this);
         fileMenu.add(saveProject);
 
         // Save project as
-        saveProjectAs = new JMenuItem("Lưu Bộ Bài Thi Tại .....", KeyEvent.VK_S);
+        saveProjectAs = new JMenuItem("LÆ°u Bá»™ BĂ i Thi Táº¡i .....", KeyEvent.VK_S);
         //saveProjectAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
         saveProjectAs.addActionListener(this);
         fileMenu.add(saveProjectAs);
@@ -66,24 +66,24 @@ public class Menu extends JMenuBar implements ActionListener {
         add(sheetsMenu);
         
         importSheets = new JMenuItem("Nhập Bài Thi", KeyEvent.VK_I);
-        importSheets.getAccessibleContext().setAccessibleDescription("Nhập hình ảnh bài thi vào bộ bài thi");
+        importSheets.getAccessibleContext().setAccessibleDescription("Nháº­p hĂ¬nh áº£nh bĂ i thi vĂ o bá»™ bĂ i thi");
         importSheets.addActionListener(this);
         sheetsMenu.add(importSheets);
 
         // Export answers
-        exportAnswers = new JMenuItem("Xuất Câu Trả Lời", KeyEvent.VK_C);
-        exportAnswers.getAccessibleContext().setAccessibleDescription("Xuất Toàn Bộ Câu Trả Lời Ra Một Tệp Tin");
+        exportAnswers = new JMenuItem("Xấu Câu Trắc Nghiệm", KeyEvent.VK_C);
+        exportAnswers.getAccessibleContext().setAccessibleDescription("Xuáº¥t ToĂ n Bá»™ CĂ¢u Tráº£ Lá»�i Ra Má»™t Tá»‡p Tin");
         exportAnswers.addActionListener(this);
         sheetsMenu.add(exportAnswers);
         
         // Export results
         exportResults = new JMenuItem("Xuất Kết Quả", KeyEvent.VK_R);
-        exportResults.getAccessibleContext().setAccessibleDescription("Xuất Toàn Bộ Kết Quả Ra Một Tệp Tin");
+        exportResults.getAccessibleContext().setAccessibleDescription("Xuáº¥t ToĂ n Bá»™ Káº¿t Quáº£ Ra Má»™t Tá»‡p Tin");
         exportResults.addActionListener(this);
         sheetsMenu.add(exportResults);
         
         // Edit menu
-        JMenu editMenu = new JMenu("Tuỳ Chỉnh");
+        JMenu editMenu = new JMenu("Tùy Chỉnh");
         editMenu.setMnemonic(KeyEvent.VK_E);
         add(editMenu);
         
@@ -119,7 +119,7 @@ public class Menu extends JMenuBar implements ActionListener {
         //editMenu.add(paste);
 
         // Delete
-        JMenuItem delete = new JMenuItem("Xoá", KeyEvent.VK_D);
+        JMenuItem delete = new JMenuItem("Xóa", KeyEvent.VK_D);
         delete.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0));
         //delete.addActionListener(new DeleteAction(undoManager));
         editMenu.add(delete);
@@ -133,8 +133,8 @@ public class Menu extends JMenuBar implements ActionListener {
         //menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
         add(mailMenu);
         
-        mailFeedback = new JMenuItem("Gửi Mail Kết Quả Cho Thí Sinh", KeyEvent.VK_M);
-        mailFeedback.getAccessibleContext().setAccessibleDescription("Gửi Mail Kết Quả Cho Thí Sinh");
+        mailFeedback = new JMenuItem("Gá»­i Mail Káº¿t Quáº£ Cho ThĂ­ Sinh", KeyEvent.VK_M);
+        mailFeedback.getAccessibleContext().setAccessibleDescription("Gá»­i Mail Káº¿t Quáº£ Cho ThĂ­ Sinh");
         mailFeedback.addActionListener(this);
         mailMenu.add(mailFeedback);
         

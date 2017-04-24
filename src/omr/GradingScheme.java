@@ -36,7 +36,7 @@ public class GradingScheme {
             OMRProperties.getDouble("score-correct", 1.0 );
     
     public static final double SCORE_INCORRECT = 
-            OMRProperties.getDouble("score-incorrect", -0.5 );
+            OMRProperties.getDouble("score-incorrect", 0.5 );
     
     public static final double SCORE_NONE = 
             OMRProperties.getDouble("score-none", 0.0 );

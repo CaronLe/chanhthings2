@@ -52,7 +52,7 @@ public class RegistrationMarkerPropertiesPanel extends JPanel implements Scrolla
     private MarkerImageComponent markerImage;
     
     public RegistrationMarkerPropertiesPanel() {
-        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Tuỳ Chỉnh Mẫu Kí Hiệu"));
+        this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Tùy chỉnh mẫu kí hiệu"));
         
         // GridBagLayout
         this.setLayout(new GridBagLayout());
@@ -66,21 +66,21 @@ public class RegistrationMarkerPropertiesPanel extends JPanel implements Scrolla
 
         // Width
         left.gridy = right.gridy = 0;
-        this.add(new JLabel("Độ Rộng Kí Hiệu:"), left);
+        this.add(new JLabel("Chiều rộng kí hiệu:"), left);
         widthSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 64, 1));
         widthSpinner.addChangeListener(this);
         this.add(widthSpinner, right);
 
         // Height
         left.gridy = right.gridy = 1;
-        this.add(new JLabel("Độ Dài Kí Hiệu:"), left);
+        this.add(new JLabel("Chiều dài kí hiệu:"), left);
         heightSpinner = new JSpinner(new SpinnerNumberModel(1, 1, 64, 1));
         heightSpinner.addChangeListener(this);
         this.add(heightSpinner, right);
 
         // Search radius
         left.gridy = right.gridy = 2;
-        this.add(new JLabel("Bán Kính Nhận Dạng:"), left);
+        this.add(new JLabel("Bán kính nhận dạng:"), left);
         searchRadiusSpinner = new JSpinner(new SpinnerNumberModel(1, 0, 256, 1));
         searchRadiusSpinner.addChangeListener(this);
         this.add(searchRadiusSpinner, right);

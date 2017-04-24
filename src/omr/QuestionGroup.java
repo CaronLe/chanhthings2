@@ -15,7 +15,7 @@ public class QuestionGroup extends Observable implements Comparable<QuestionGrou
      * HORIZONTAL means that columns represent questions and rows represent alternatives.
      */
     public enum Orientation {
-    	VERTICAL("vertical"), HORIZONTAL("horizontal"), STUDENT_NUMBER("student-number"), CHECK_LETTER("check-letter");
+    	VERTICAL("Lưới Câu Hỏi"), HORIZONTAL("horizontal"), STUDENT_NUMBER("Số Báo Danh"), CHECK_LETTER("Tuýt Yes/No");
     	
     	private String name;
     	private Orientation(String name) {

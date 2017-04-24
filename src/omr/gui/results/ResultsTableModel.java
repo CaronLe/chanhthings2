@@ -44,13 +44,13 @@ public class ResultsTableModel extends AbstractTableModel {
     
     public String getColumnName(int col) {
         if (col == 0) {
-            return "Hình Bài Thi";
+            return "Tên Hình Ảnh";
         } else if (col == 1) {
             return "Số Báo Danh";
         }
         
         if (project == null) {
-            return "Tổng Điểm";
+            return "Tổng Số Điểm";
         }
         
         col -= 2;

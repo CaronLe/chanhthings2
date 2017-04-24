@@ -28,7 +28,7 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeSelectionModel;
 
-import apple.laf.JRSUIUtils.Tree;
+
 import omr.Project;
 import omr.Sheet;
 import omr.gui.Gui;

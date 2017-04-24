@@ -40,7 +40,7 @@ public class StructurePropertiesPanel extends JPanel implements ItemListener {
     public StructurePropertiesPanel(SheetEditor sheetEditor) {
         this.sheetEditor = sheetEditor;
     	
-    	this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Thành Phần"));
+    	this.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Thành phần"));
         
         // GridBagLayout
         this.setLayout(new GridBagLayout());
