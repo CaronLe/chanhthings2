@@ -87,7 +87,7 @@ public class CsvSerializer {
             fout = new PrintStream(new FileOutputStream (file));
             
             // Write header line
-            fout.print("image,studentId");
+            fout.print("Image	StudentId");
             for (QuestionGroup group : structure.getQuestionGroups()) {
             	// Skip the studentnumber
             	if (group.getOrientation() != Orientation.VERTICAL && group.getOrientation() != Orientation.HORIZONTAL) {
@@ -97,17 +97,17 @@ public class CsvSerializer {
                 int questionsCount = group.getQuestionsCount();
                 int indexOffset = group.getIndexOffset();
                 for (int i = 0; i < questionsCount; i++) {
-                    fout.print(",");
+                    fout.print("	");
                     fout.print(indexOffset + i);
                 }
             }
-            fout.print(",total");
+            fout.print("	Total");
             fout.println();
             
             for (Sheet sheet : project.getSheetsContainer()) {
                 // Image filename
                 fout.print(sheet.getFileName());
-                fout.print(",");
+                fout.print("	");
                 
                 // Student id
                 String studentId = sheet.getStudentId(); 
@@ -127,14 +127,14 @@ public class CsvSerializer {
                 	int questionsCount = group.getQuestionsCount();
                     for (int i = 0; i < questionsCount; i++) {    
                         double score = grading.getScore(sheet, group, i);
-                        fout.print(",");
+                        fout.print("	");
                         fout.print(score);
                     }
                 }
 
                 // Total score in the last column
                 double totalScore = grading.getScore(sheet, project.getSheetStructure());
-                fout.print(",");
+                fout.print("	");
                 fout.print(totalScore);
 
                 fout.println();

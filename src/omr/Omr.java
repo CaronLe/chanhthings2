@@ -39,12 +39,21 @@ public class Omr {
      */
     private void createAndShowGUI() {
         // Set look and feel
-    	try {
-            UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
-        } catch (Exception e) {
-        }
+//    	try {
+//            UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
+//        } catch (Exception e) {
+//        }
     	
-    	
+    	 try {
+           for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+               if ("Nimbus".equals(info.getName())) {
+                   UIManager.setLookAndFeel(info.getClassName());
+                   break;
+               }
+           }
+       } catch (Exception e) {
+       }
+
     	
         // Create gui
         new Gui();

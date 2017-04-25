@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<omr-project blackThreshold="0" version="0.1" whiteThreshold="255">
-    <structure referenceSheet="0004.jpg"/>
+<omr-project blackThreshold="198" version="0.1" whiteThreshold="225">
+    <structure referenceSheet="0002.jpg">
+        <bubble-group bottomY="727" bubbleHeight="10" bubbleWidth="10"
+            columns="6" indexOffset="0" leftX="716" rightX="1041"
+            rows="5" topY="450" type="vertical">
+            <answer-key>010000,010000,001000,000100,010000</answer-key>
+        </bubble-group>
+    </structure>
     <answers>
         <sheet id="0002.jpg" page="0" rotation="0" src="/Users/swift/Documents/Senior Project/auto-grading-root/testdata/0002.jpg"/>
         <sheet id="0003.jpg" page="0" rotation="0" src="/Users/swift/Documents/Senior Project/auto-grading-root/testdata/0003.jpg"/>
