@@ -1,5 +1,7 @@
 package omr.gui;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -32,9 +34,10 @@ public class Menu extends JMenuBar implements ActionListener {
         // File menu
         JMenu fileMenu = new JMenu("Bộ Bài Thi");
         fileMenu.setMnemonic(KeyEvent.VK_F);
-        //menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
+        fileMenu.setForeground(new Color(48,47,95));
+        fileMenu.setFont(new Font("Century Gothic", Font.BOLD, 14));
         add(fileMenu);
-
+        
         // New project
         newProject = new JMenuItem("Tạo Bộ Bài Thi Mới", KeyEvent.VK_N);
         newProject.addActionListener(this);
@@ -62,6 +65,8 @@ public class Menu extends JMenuBar implements ActionListener {
         // Sheets management
         JMenu sheetsMenu = new JMenu("Bài Thi");
         sheetsMenu.setMnemonic(KeyEvent.VK_F);
+        sheetsMenu.setForeground(new Color(48,47,95));
+        sheetsMenu.setFont(new Font("Century Gothic", Font.BOLD, 14));
         //menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
         add(sheetsMenu);
         
@@ -85,6 +90,8 @@ public class Menu extends JMenuBar implements ActionListener {
         // Edit menu
         JMenu editMenu = new JMenu("Tuỳ Chỉnh");
         editMenu.setMnemonic(KeyEvent.VK_E);
+        editMenu.setForeground(new Color(48,47,95));
+        editMenu.setFont(new Font("Century Gothic", Font.BOLD, 14));
         add(editMenu);
         
         // Undo
@@ -127,16 +134,16 @@ public class Menu extends JMenuBar implements ActionListener {
     
 
         
-        // Mail feedback
-        JMenu mailMenu = new JMenu("Gửi Mail");
-        mailMenu.setMnemonic(KeyEvent.VK_F);
-        //menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
-        add(mailMenu);
-        
-        mailFeedback = new JMenuItem("Gửi Mail Kết Quả Cho Thí Sinh", KeyEvent.VK_M);
-        mailFeedback.getAccessibleContext().setAccessibleDescription("Gửi Mail Kết Quả Cho Thí Sinh");
-        mailFeedback.addActionListener(this);
-        mailMenu.add(mailFeedback);
+//        // Mail feedback
+//        JMenu mailMenu = new JMenu("Gửi Mail");
+//        mailMenu.setMnemonic(KeyEvent.VK_F);
+//        //menu.getAccessibleContext().setAccessibleDescription("The only menu in this program that has menu items");
+//        add(mailMenu);
+//        
+//        mailFeedback = new JMenuItem("Gửi Mail Kết Quả Cho Thí Sinh", KeyEvent.VK_M);
+//        mailFeedback.getAccessibleContext().setAccessibleDescription("Gửi Mail Kết Quả Cho Thí Sinh");
+//        mailFeedback.addActionListener(this);
+//        mailMenu.add(mailFeedback);
         
 
     }

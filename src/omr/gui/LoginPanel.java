@@ -1,6 +1,7 @@
 package omr.gui;
 
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -17,7 +18,9 @@ public class LoginPanel extends JPanel {
 		this.setLayout(new GridLayout(1, 3));
 		this.setSize(400, 30);
 		usernameTf = new JTextField("admin");
-		passwordTf = new JTextField("123");
+		usernameTf.setFont(new Font("Century Gothic", Font.ITALIC, 12));
+		passwordTf = new JTextField("12345");
+		passwordTf.setFont(new Font("Century Gothic", Font.ITALIC, 12));
 //		passwordTf.
 		loginBtn = new JButton("Login");
 		this.add(usernameTf);

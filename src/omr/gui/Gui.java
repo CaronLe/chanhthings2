@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 
 import javax.swing.*;
 
+import javafx.scene.control.TableView.TableViewSelectionModel;
 import omr.CsvSerializer;
 import omr.Deserializer;
 import omr.Project;
@@ -97,6 +98,8 @@ public class Gui extends JFrame {
         JScrollPane overviewPanelScrollPane = new JScrollPane(overviewPanel);
         overviewPanelScrollPane.getVerticalScrollBar().setValue(overviewPanelScrollPane.getVerticalScrollBar().getMaximum());
         tabs.addTab("Tệp Bài Thi", null, overviewPanelScrollPane, "Hiển thị hình ảnh của toàn bộ bài thi");
+        tabs.setFont(new Font("Comic Sans MS Bold", Font.BOLD, 12));
+       
         tabs.setIconAt(tabs.indexOfTab("Tệp Bài Thi"), new javax.swing.ImageIcon("images/exams.jpg", "Nice exam has been graded"));
         
         // Structure

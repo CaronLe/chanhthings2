@@ -47,7 +47,7 @@ public class NavigationPanel extends JPanel implements ChangeListener, Observer{
 		nameProjectLabel = new JLabel("Math 2011");
 		Font fontNameProjectLabel = nameProjectLabel.getFont();
 		nameProjectLabel.setFont(fontNameProjectLabel.deriveFont(fontNameProjectLabel.getStyle() ^ Font.BOLD));
-		
+		nameProjectLabel.setForeground(new Color(2, 132, 208));
 		nameProjectPanel.add(nameProjectLabel);
 		nameProjectPanel.setAlignmentX(FlowLayout.TRAILING);
 
