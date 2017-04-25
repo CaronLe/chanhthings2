@@ -55,7 +55,7 @@ public class Gui extends JFrame {
         this.reset();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(new Dimension(1200, 800));
+        this.setSize(new Dimension(1250, 900));
 
         
         
@@ -92,27 +92,32 @@ public class Gui extends JFrame {
         JTabbedPane tabs = new JTabbedPane();
         containerPanel.add(tabs, BorderLayout.CENTER);
         this.add(containerPanel);
-        
         // OverView Tab
         overviewPanel = new OverviewPanel();
         JScrollPane overviewPanelScrollPane = new JScrollPane(overviewPanel);
         overviewPanelScrollPane.getVerticalScrollBar().setValue(overviewPanelScrollPane.getVerticalScrollBar().getMaximum());
-        tabs.addTab("Bài Thi", null, overviewPanelScrollPane, "Hiển thị hình ảnh của toàn bộ bài thi");
- 
+        tabs.addTab("Tệp Bài Thi", null, overviewPanelScrollPane, "Hiển thị hình ảnh của toàn bộ bài thi");
+        tabs.setIconAt(tabs.indexOfTab("Tệp Bài Thi"), new javax.swing.ImageIcon("images/exams.jpg", "Nice exam has been graded"));
+        
         // Structure
         structurePanel = new StructurePanel(this);
         tabs.addTab("Thiết Lập Cấu Trúc", null, structurePanel, "Thiết Lập Cấu Trúc Bài Thi");
         // setMnemonicAt(0, KeyEvent.VK_1);
-
+        tabs.setIconAt(tabs.indexOfTab("Thiết Lập Cấu Trúc"), new javax.swing.ImageIcon("images/structure.png", "Nice exam has been graded"));
+        
         calibratePanel = new CalibratePanel(this);
         tabs.addTab("Xử Lý Hình Ảnh", null, calibratePanel, "Xử lý hình ảnh và kiểm duyệt của người dùng");
+        tabs.setIconAt(tabs.indexOfTab("Xử Lý Hình Ảnh"), new javax.swing.ImageIcon("images/analyze.png", "Nice exam has been graded"));
         // setMnemonicAt(0, KeyEvent.VK_1);
         tabs.addChangeListener(calibratePanel);  // Listen to tab change events
+        tabs.setIconAt(tabs.indexOfTab("Xử Lý Hình Ảnh"), new javax.swing.ImageIcon("images/analyze.jpg", "Nice exam has been graded"));
+        
         
         resultsPanel = new ResultsPanel(this);
         tabs.addTab("Kết Quả Thi", null, resultsPanel, "Kết quả thi của các thí sinh");
         // setMnemonicAt(0, KeyEvent.VK_1);
         tabs.addChangeListener(resultsPanel);
+        tabs.setIconAt(tabs.indexOfTab("Kết Quả Thi"), new javax.swing.ImageIcon("images/examgraded.png", "Nice exam has been graded"));
         
         // Statusbar at the bottom
         statusBar = new StatusBar();

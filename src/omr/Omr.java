@@ -1,7 +1,8 @@
 package omr;
+import java.awt.Color;
+
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-
 import omr.gui.Gui;
 
 
@@ -38,16 +39,13 @@ public class Omr {
      */
     private void createAndShowGUI() {
         // Set look and feel
-        try {
-            for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+    	try {
+            UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
         } catch (Exception e) {
         }
-        
+    	
+    	
+    	
         // Create gui
         new Gui();
     }
