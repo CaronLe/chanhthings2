@@ -7,6 +7,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 import javafx.scene.control.TableView.TableViewSelectionModel;
 import omr.CsvSerializer;
@@ -275,15 +277,22 @@ public class Gui extends JFrame {
      */
     private File showSaveAsDialog() {
         JFileChooser chooser = new JFileChooser(myDir);
-        //chooser.addChoosableFileFilter(new OmrFileFilter()); 
-
+        FileFilter filter = new FileNameExtensionFilter("Microsoft Excel File", "xls");
+        chooser.addChoosableFileFilter(filter); 
+        
         int returnVal = chooser.showSaveDialog(this);
         if (returnVal != JFileChooser.APPROVE_OPTION) {
             // Cancel
             return null;
         }
         
+      
+        // Save to excel format
         File file = chooser.getSelectedFile();
+        String filePath = file.getAbsolutePath();
+        if(!filePath.endsWith(".xls")) {
+            file = new File(filePath + ".xls");
+        }
 
         // Prompt overwrite
         if (file.exists()) {

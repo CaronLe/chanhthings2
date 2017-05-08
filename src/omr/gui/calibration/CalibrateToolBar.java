@@ -1,7 +1,9 @@
 package omr.gui.calibration;
 
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,8 +45,8 @@ public class CalibrateToolBar extends JToolBar implements ActionListener {
         ZoomPanel zoomPanel = new ZoomPanel();
         zoomPanel.addActionListener(this);
         
-        //this.addSeparator();
-        this.add(zoomPanel);
+        this.addSeparator();
+        this.add(zoomPanel, BorderLayout.WEST);
     }
     
     public void actionPerformed(ActionEvent event) {

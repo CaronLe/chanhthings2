@@ -2,6 +2,7 @@ package omr.gui.calibration;
 
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -82,18 +83,23 @@ public class CalibratePanel extends JPanel implements ListSelectionListener, Cha
         
         rightPanel = new JPanel(new BorderLayout());
         rightPanel.add(sheetViewScrollPane, BorderLayout.CENTER);
-//        rightPanel.add(propertiesScroll, BorderLayout.LINE_END);
-//        rightPanel.add(histogram, BorderLayout.PAGE_END);
+//      rightPanel.add(propertiesScroll, BorderLayout.LINE_END);
+//      rightPanel.add(histogram, BorderLayout.PAGE_END);
         
         // Split pane
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
         splitPane.setOneTouchExpandable(false);
-        splitPane.setDividerLocation(150);
-        splitPane.setLeftComponent(sheetListScrollPane);
-        splitPane.setRightComponent(rightPanel);
+        splitPane.setDividerLocation(800);
+        splitPane.setRightComponent(sheetListScrollPane);
+        splitPane.setLeftComponent(rightPanel);
         
         // Toolbar
         JToolBar toolbar = new CalibrateToolBar(sheetView);
+        toolbar.setPreferredSize(new Dimension(150, 35));
+        JPanel emptyPanel = new JPanel();
+        emptyPanel.setPreferredSize(new Dimension(800, 35));
+        toolbar.add(emptyPanel);
+        
         
         // Add top level components
         this.add(toolbar, BorderLayout.PAGE_START);
